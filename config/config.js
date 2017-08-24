@@ -16,16 +16,16 @@ const config = {
 	dev: {
 		root: rootPath,
 		app: {
-			name: 'leisure-project',
+			name: 'olx-slayer-api',
 		},
 		port: envPort || 3000,
-		connectionString: envConnString || 'mongodb://localhost:27017/leisureDb',
-		secretString: envDbSecret || 'Secret magical popcorn',
+		connectionString: envConnString || 'mongodb://localhost:27017/olxSlayer',
+		secretString: envDbSecret || 'ohwow',
 	},
 	production: {
 		root: rootPath,
 		app: {
-			name: 'leisure-project',
+			name: 'olx-slayer-api',
 		},
 		port: envPort,
 		connectionString: envConnString,
