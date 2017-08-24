@@ -1,0 +1,31 @@
+# Routes
+- ## Users
+	- ### [GET] -> `/api/users`
+		- All users
+	- ### [GET] -> `/api/users/:username`
+		- Specific user
+	- ### [POST] -> `/api/users`
+		- Create new user
+		- Body: new user data
+	- ### [POST] -> `api/users/:username`
+		- Edit user`s profile with the passed data fields
+		- Body: data to edit
+- ## Advertisements
+	- ### [GET] -> `/api/advertisements`
+		- Get all advertisements
+		- Additional query parameters
+			- orderBy && sort (both or none must be provided)
+				- Can be done if only orderBy is provided, to sort in ascending order
+				- Orders by given property in the passed sort type
+				- Ex: `/api/advertisements?orderBy=title&sort=asc`
+				- Ex: `/api/advertisements?orderBy=description&sort=desc`
+			- query
+				- Searches by given keyword
+				- Ex: `/api/advertisements?query=bitches`
+			- #### pageNumber && pageCount
+				- #### TODO
+	- ### [GET] -> `/api/advertisements/:id`
+		- Specific advertisement
+	- ### [POST] -> `/api/advertisements`
+		- Create new advertisement
+		- Body: new advertisement data
