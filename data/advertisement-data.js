@@ -46,7 +46,7 @@ module.exports = (advertisementCollection) => {
                     [query.orderBy]: sortType,
                 };
             }
-
+            console.log(advertisementCollection.find(search, {}, sort));
             return advertisementCollection.find(search, {}, sort);
         },
         createAdvertisement(advertisement) {
