@@ -1,6 +1,21 @@
 module.exports = (advertisementCollection) => {
 
     return {
+        removeAdvertisement(id) {
+            const validObjectId = new RegExp('^[0-9a-fA-F]{24}$');
+
+            if (!validObjectId.test(id)) {
+                return Promise.reject();
+            }
+
+            const _id = advertisementCollection.generateId(id);
+
+            const filter = {
+                _id,
+            };
+
+            return advertisementCollection.deleteOne(filter);
+        },
         getById(id) {
             const validObjectId = new RegExp('^[0-9a-fA-F]{24}$');
 

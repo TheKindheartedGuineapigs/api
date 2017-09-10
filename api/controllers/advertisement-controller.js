@@ -36,5 +36,20 @@ module.exports = ({ advertisementData }) => {
                     });
                 });
         },
+        deleteAdvertisement(req, res) {
+            const id = req.params.id;
+
+            return advertisementData.removeAdvertisement(id)
+                .then((result) => {
+                    return res.json({
+                        result,
+                    });
+                })
+                .catch((err) => {
+                    return res.json({
+                        result: 'Invalid id',
+                    });
+                });
+        },
     };
 };
