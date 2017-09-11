@@ -43,6 +43,8 @@ module.exports = (chatCollection) => {
                 _id: chatCollection.generateId(id),
             };
 
+            message.timeStamp = new Date();
+
             const update = {
                 $push: {
                     messages: message ,
