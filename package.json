@@ -30,6 +30,7 @@
     "gulp-mocha": "^3.0.1",
     "gulp-nodemon": "^2.2.1",
     "gulp-plumber": "^1.1.0",
+    "https": "^1.0.0",
     "method-override": "^2.3.0",
     "mongodb": "^2.2.29",
     "morgan": "^1.6.1",
